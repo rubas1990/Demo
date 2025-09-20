@@ -1,0 +1,204 @@
+/* ===================================
+   ESTILO BASE INDUSTRIAL
+=================================== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: #0a0f14;
+    color: #0a0f14;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+/* ===================================
+   ENCABEZADOS SUPERIORES
+=================================== */
+/* el body controla todo el alto */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% de la pantalla */
+}
+
+/* header ocupa su parte fija arriba */
+header {
+    flex: 0 0 100px; /* altura fija de 100px (ajusta a gusto) */
+    background: #0c141a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #ccc;
+}
+
+
+
+/* ===================================
+   LAYOUT PRINCIPAL
+=================================== */
+/* contenedor ocupa el resto */
+.container {
+    flex: 1;                /* ocupa todo lo que queda */
+    display: flex;
+    overflow: hidden;       /* evita scroll lateral */
+}
+
+/* columnas: se reparten la pantalla */
+.sidebar {
+    flex: 3;                /* más ancho */
+    background: #0a0f14;     /* gris */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;       /* scroll si hay muchos pasos */
+}
+
+
+.main {
+    flex: 4;                /* columna central más grande */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.rightbar {
+    flex: 2;                /* más angosta */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.col {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Distribución 25% – 50% – 25% */
+.col:first-child {
+    width: 30%;
+}
+.img-col {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col:last-child {
+    width: 20%;
+}
+
+/* ===================================
+   LISTA DE PASOS
+=================================== */
+.pasos {
+    margin: 0;
+    padding: 0;
+}
+
+.pasos li {
+    list-style: none;
+    margin: 0;
+    padding: 6px 10px;
+    line-height: 1.3;
+    font-size: 14px;
+    background: #0a0f14; /* fondo negro uniforme */
+    color: #f1f1f1;      /* texto blanco */
+    border-left: 5px solid transparent;
+}
+
+.pasos li.actual {
+    background: #f9fbfa;   /* fondo blanco */
+    color: #111111;         /* texto negro */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Estados */
+.pasos .ok {
+    background: #2ecc71;        /* verde brillante */
+    color: #ffffff;             /* texto blanco para contraste */
+    border-left: 5px solid #00ff66; 
+    font-size: 20px;            /* tamaño de letra aumentado */
+
+}
+.pasos .actual {
+    background: #f9fbfa;   /* fondo blanco */
+    color: #fffefe;           /* texto oscuro para que se vea */
+    font-weight: bold;
+    font-size: 35px;       /* tamaño grande */
+}
+
+.pasos .fail {
+    background: #330000;
+    color: #ff4444;
+    border-left: 5px solid #ff4444;
+    animation: parpadeo 1s infinite;
+}
+.pasos .pendiente {
+    background: #111;
+    color: #fff;
+    font-size: 20px; /* aumenta el tamaño de letra */
+}
+
+/* ===================================
+   TARJETAS DE INFORMACIÓN
+=================================== */
+.card {
+    background: #111;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f1f1f1;
+    border-bottom: 1px solid #333;
+    margin: 0;
+    line-height: 1.3;
+}
+.card:last-child {
+    border-bottom: none;
+}
+
+/* ===================================
+   ANIMACIONES
+=================================== */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.titulo-box .titulo,
+.titulo-box .subtitulo {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
